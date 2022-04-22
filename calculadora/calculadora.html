@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colculadora</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <section class="action-result">
+            <input class="a" title="number-a" id="a" type="number" value="">
+            <p id="operador"></p>
+            <input class="b" title="number-b" id="b" type="number" value="">
+            <p id="operadorigual">=</p>
+            <div>
+                <p id="output"></p>
+            </div>
+        </section>
+        <section class="operadores">
+            <div class="basicas">
+                <button onclick="sumas()" title="suma" type="button" id="suma">suma</button>
+                <button onclick="restas()" title="resta" type="button" id="resta">resta</button>
+                <button onclick="multiplicaciones()" title="multiplicación" type="button" id="multiplicación">multiplicación</button>
+                <button onclick="divisiones()" title="división" type="button" id="división">división</button>
+            </div>
+            <div class="intermedias">
+                <button onclick="raiz()" title="raiz" type="button" id="raiz">raiz</button>
+                <button onclick="exponente()" title="exponente" type="button" id="exponente">exponente</button>
+                <button onclick="factorial()" title="factorial" type="button" id="factorial">factorial</button>
+                <button onclick="raiz()" title="raiz" type="button" id="raiz">holi</button>
+            </div>
+            <div class="avanzadas">
+                <button onclick="raiz()" title="raiz" type="button" id="raiz">holi</button>
+                <button onclick="raiz()" title="raiz" type="button" id="raiz">holi</button>
+                <button onclick="raiz()" title="raiz" type="button" id="raiz">holi</button>
+                <button onclick="raiz()" title="raiz" type="button" id="raiz">holi</button>
+            </div>
+            <button onclick="resultados()" title="resultado" type="button" id="resultado">resultado</button>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+    <script src="./jquery-3.6.0.min.js"></script>
+</body>
+</html>
