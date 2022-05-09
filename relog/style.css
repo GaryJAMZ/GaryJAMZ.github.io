@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lobster', cursive;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000000;
+    flex-direction: column;
+    margin-top: 18%;
+}
+#clock{
+    display: flex;
+    gap: 40px;
+    color: #ffffff;
+}
+
+#clock .circulo{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#clock .circulo svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+#clock .circulo svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: #ffffff;
+    stroke-width: 4;
+    transform: translate(5px,5px);
+}
+#clock .circulo svg circle:nth-child(2){
+    stroke: var(--gencol);
+    stroke-dasharray: 440;
+}
+#clock div{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+#clock div span{
+    position: absolute;
+    font-size: 0.4em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+}
+#clock .ap{
+    position: relative;
+    font-size: 1em;
+    transform: translateX(-20px);
+}
+.punto{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+.punto::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 15px;
+    height: 15px;
+    background: var(--gencol);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--gencol),
+    0 0 60px var(--gencol);
+}
+.boton{
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    top: 10%;
+    transition: 200ms;
+}
+.boton button{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
