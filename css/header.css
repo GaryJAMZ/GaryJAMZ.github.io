@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+body{
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.header{
+    position: absolute;
+    background-color: black;
+    width: 60%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: -31px -7px 55px 11px rgba(66,23,66,0.73);
+}
+.header a{
+    color: #6e077d;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
