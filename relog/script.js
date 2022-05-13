@@ -1,4 +1,39 @@
 setInterval(() =>{
+    let dia = document.getElementById('dia');
+    let mes = document.getElementById('mes');
+    let año = document.getElementById('año');
+
+
+    let day = document.getElementById('day');
+    let mon = document.getElementById('mon');
+    let year = document.getElementById('year');
+
+    let day_punto = document.querySelector('.day_punto');
+    let mon_punto = document.querySelector('.mon_punto');
+    let year_punto = document.querySelector('.year_punto');
+
+    let d = new Date().getDay();
+    let mo = new Date().getMonth();
+    let y = new Date().getFullYear();
+
+    d = (d < 10) ? "0" + d : d;
+    mo = (mo < 10) ? "0" + mo : mo;
+    y = (y < 10) ? "0" + y : y;
+
+    dia.innerHTML = d + "<br><span>dia</span>";
+    mes.innerHTML = mo + "<br><span>mes</span>";
+    año.innerHTML = y + "<br><span>año</span>";
+
+    day.style.strokeDashoffset = 440 - (440 * d) / 30;
+    mon.style.strokeDashoffset = 440 - (440 * mo) / 20;
+    year.style.strokeDashoffset = 440 - (440 * y) / 10;
+
+
+    day_punto.style.transform = `rotate(${d * 3}deg)`;
+    mon_punto.style.transform = `rotate(${mo * 15}deg)`;
+    year_punto.style.transform = `rotate(${y * 2}deg)`;
+})
+setInterval(() =>{
     let horas = document.getElementById('horas');
     let minutos = document.getElementById('minutos');
     let segundos = document.getElementById('segundos');
