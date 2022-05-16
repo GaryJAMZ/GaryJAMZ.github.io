@@ -1,31 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 62.5%;
-    font-family: 'Lobster', cursive;
+    font-family: 'Macondo', cursive;
 }
 body{
-    position: relative;
     display: flex;
     align-items:center;
     justify-content: center;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    background: #1a0f18;
 }
-.header{
+ul{
+    position: relative;
+    transform: skewY(-15deg);
+}
+ul li{
+    position: relative;
+    list-style: none;
+    width: 220px;
+    background: #100025;
+    padding: 15px;
+    z-index: var(--i);
+    transition: 0.5s;
+}
+ul li:hover{
+    background: #7b00c8;
+    transform: translateX(50px);
+}
+ul li::before{
+    content: '';
     position: absolute;
-    background-color: black;
-    width: 80%;
-    height: 10%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: -31px -7px 55px 11px rgba(66,23,66,0.73);
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: #0b0018;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
 }
-.header a{
-    color: #6e077d;
-    font-size: 2.5rem;
+ul li:hover::before{
+    background: #5c0194;
+}
+ul li::after{
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #16032f;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+ul li:hover::after{
+    background: #6700a7;
+}
+ul li a{
     text-decoration: none;
+    color: #895c8b;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    transition: 0.5s;
+}
+ul li:hover a{
+    color: #ffffff;
+}
+ul li:last-child::after{
+    box-shadow: -120px 120px  20px rgba(0,0,0,0.5);
 }
