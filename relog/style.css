@@ -10,9 +10,19 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #000000;
+    background: #1f0129;
     flex-direction: column;
-    margin-top: 18%;
+}
+main{
+    width: 550px;
+    height: 450px;
+    background: #0e0e0eac;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: -20px 20px 60px rgba(92, 1, 80, 0.7);
 }
 #clock,
 #clockdwmy{
@@ -20,9 +30,10 @@ body{
     justify-content: space-around;
     color: #ffffff;
     width: 80%;
+    max-width: 450px;
 }
 #clockdwmy{
-    margin-top: 10%;
+    margin-top: 25px;
 }
 
 #clock .circulo,
