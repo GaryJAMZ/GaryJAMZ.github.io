@@ -21,7 +21,6 @@ ul li{
     list-style: none;
     width: 220px;
     background: #100025;
-    padding: 15px;
     z-index: var(--i);
     transition: 0.5s;
 }
@@ -66,6 +65,7 @@ ul li a{
     text-transform: uppercase;
     letter-spacing: 0.5em;
     transition: 0.5s;
+    padding: 15px;
 }
 ul li:hover a{
     color: #ffffff;
