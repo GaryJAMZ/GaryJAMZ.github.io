@@ -2,19 +2,47 @@ setInterval(() =>{
     let dia = document.getElementById('dia');
     let mes = document.getElementById('mes');
     let año = document.getElementById('año');
+    let dayweek = document.getElementById('dayweek');
 
 
     let day = document.getElementById('day');
     let mon = document.getElementById('mon');
     let year = document.getElementById('year');
 
-    let day_punto = document.querySelector('.day_punto');
-    let mon_punto = document.querySelector('.mon_punto');
-    let year_punto = document.querySelector('.year_punto');
+    let puntoday = document.querySelector('.day_punto');
+    let puntomon = document.querySelector('.mon_punto');
+    let puntoyear = document.querySelector('.year_punto');
 
-    let d = new Date().getDay();
+    let d = new Date().getDate();
     let mo = new Date().getMonth();
     let y = new Date().getFullYear();
+
+    let dw = new Date().getDay();
+    let dweek;
+
+    switch (dw) {
+        case 0:
+            dweek = "Domingo";
+            break;
+        case 1:
+            dweek = "Lunes";
+            break;
+        case 2:
+            dweek = "Martes"
+            break;
+        case 3:
+            dweek = "Miercoles"
+            break;
+        case 4:
+            dweek = "Jueves"
+            break;
+        case 5:
+            dweek = "Viernes"
+            break;
+        default:
+            dweek = "Sabado"
+            break;
+    }
 
     d = (d < 10) ? "0" + d : d;
     mo = (mo < 10) ? "0" + mo : mo;
@@ -25,17 +53,28 @@ setInterval(() =>{
     dia.innerHTML = d + "<br><span>dia</span>";
     mes.innerHTML = mo + "<br><span>mes</span>";
     año.innerHTML = y + "<br><span>año</span>";
-
+    dayweek.innerHTML = dweek;
     
+    let year_real = y - 2000;
 
-    day.style.strokeDashoffset = 440 - (440 * d) / 30;
-    mon.style.strokeDashoffset = 440 - (440 * mo) / 20;
-    year.style.strokeDashoffset = 440 - (440 * y) / 10;
+    let mesall;
+    if (mo == 1 || 3 || 5 || 7 || 8 || 10 || 12){
+        mesall = 31;
+    }else if(mo == 4 || 6 || 9 || 11){
+        mesall = 30;
+    }else{
+        mesall = 28;
+    }
 
+    day.style.strokeDashoffset = 440 - (440 * d) / mesall;
+    mon.style.strokeDashoffset = 440 - (440 * mo) / 12;
+    year.style.strokeDashoffset = 440 - (440 * year_real) / 100;
 
-    day_punto.style.transform = `rotate(${d * 3}deg)`;
-    mon_punto.style.transform = `rotate(${mo * 15}deg)`;
-    year_punto.style.transform = `rotate(${y * 2}deg)`;
+    let mondeg = 360 / mesall;
+
+    puntoday.style.transform = `rotate(${d * mondeg}deg)`;
+    puntomon.style.transform = `rotate(${mo * 30}deg)`;
+    puntoyear.style.transform = `rotate(${year_real * 3.6}deg)`;
 })
 setInterval(() =>{
     let horas = document.getElementById('horas');
