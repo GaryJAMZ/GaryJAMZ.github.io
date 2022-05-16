@@ -71,20 +71,20 @@ ul li:hover a{
     color: #ffffff;
 }
 ul li:nth-child(1)::after{
-    box-shadow: -360px 360px  20px rgba(0,0,0,0.2);
+    box-shadow: -360px 360px  20px rgba(0,0,0,0.15);
 }
 ul li:nth-child(2)::after{
-    box-shadow: -320px 320px  20px rgba(0,0,0,0.2);
+    box-shadow: -320px 320px  20px rgba(0,0,0,0.15);
 }
 ul li:nth-child(3)::after{
-    box-shadow: -260px 260px  20px rgba(0,0,0,0.3);
+    box-shadow: -260px 260px  20px rgba(0,0,0,0.2);
 }
 ul li:nth-child(4)::after{
-    box-shadow: -220px 220px  20px rgba(0,0,0,0.3);
+    box-shadow: -220px 220px  20px rgba(0,0,0,0.2);
 }
 ul li:nth-child(5)::after{
-    box-shadow: -160px 160px  20px rgba(0,0,0,0.4);
+    box-shadow: -160px 160px  20px rgba(0,0,0,0.25);
 }
 ul li:nth-child(6)::after{
-    box-shadow: -120px 120px  20px rgba(0,0,0,0.4);
+    box-shadow: -120px 120px  20px rgba(0,0,0,0.25);
 }
