@@ -20,9 +20,13 @@ setInterval(() =>{
     mo = (mo < 10) ? "0" + mo : mo;
     y = (y < 10) ? "0" + y : y;
 
+    mo = parseInt(mo) + 1;
+
     dia.innerHTML = d + "<br><span>dia</span>";
     mes.innerHTML = mo + "<br><span>mes</span>";
     año.innerHTML = y + "<br><span>año</span>";
+
+    
 
     day.style.strokeDashoffset = 440 - (440 * d) / 30;
     mon.style.strokeDashoffset = 440 - (440 * mo) / 20;
